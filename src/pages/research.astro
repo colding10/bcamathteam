@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+---
 
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88938949-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-88938949-2');
-    </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Research | BCA Math Team</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
-    <!-- CSS  -->
-    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="/css/about.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
-</head>
-
-<body>
-    <div id="header-placeholder">
-    </div>
-
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $(function () {
-            $("#header-placeholder").load("header.html");
-        });
-    </script>
-    <main>
+<LegacyLayout title="Research" styles={["/css/about.css"]}>
+<main>
         <div class="container">
             <h3><i class="material-icons" style="font-size: 1.2em;">biotech</i>
                 Research</h3>
@@ -185,7 +155,7 @@
                                 <li>What math programs are out there? Which are specific to research?
                                     <ul class="bulleted-list">
                                         <li class="indented">AwesomeMath</li>
-                                        <li class="indented">{MathILy, MathILy-Er}</li>
+                                        <li class="indented">&#123;MathILy, MathILy-Er&#125;</li>
                                         <li class="indented">HCSSiM</li>
                                         <li class="indented">PROMYS</li>
                                         <li class="indented">Ross</li>
@@ -234,7 +204,7 @@
                         <div id="video1" class="col s12">
                             <div class="center-align hide-on-med-and-down show-on-large">
                                 <iframe width="50%" height="400px"
-                                    src="https://www.youtube.com/embed/5QfhhXytIRM?si=awk7ORC_KLWhNVjv" frameborder="0"
+                                    src="https://www.youtube.com/embed/5QfhhXytIRM?si=awk7ORC_KLWhNVjv"
                                     allow="accelerometer; autoplay; encrypted-media;
                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -242,7 +212,7 @@
                             <div class="center-align show-on-medium-and-down
                                 hide-on-large-only">
                                 <iframe width="100%" height="300px"
-                                    src="https://www.youtube.com/embed/5QfhhXytIRM?si=awk7ORC_KLWhNVjv" frameborder="0"
+                                    src="https://www.youtube.com/embed/5QfhhXytIRM?si=awk7ORC_KLWhNVjv"
                                     allow="accelerometer; autoplay; encrypted-media;
                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -286,8 +256,7 @@
                                 Resources and contact information can be found at <a
                                     href="https://rmehtany.github.io/">https://rmehtany.github.io/</a>.
                             </p>
-                            <ul>
-                                <ul class="bulleted-list">
+                            <ul class="bulleted-list">
                                     <li>Think about math 24/7
                                         <ul class="bulleted-list">
                                             <li class="indented">How do you read?</li>
@@ -353,7 +322,7 @@
                                     <li>Practice writing papers
                                         <ul class="bulleted-list">
                                             <li class="indented">High school level paper will have >50% background
-                                                information, <50% results</li>
+                                                information, &lt;50% results</li>
                                             <li class="indented">Start in the middle of the paper</li>
                                             <li class="indented">Write introduction last</li>
                                             <li class="indented">MOM test</li>
@@ -377,7 +346,7 @@
                         <div id="video2" class="col s12">
                             <div class="center-align hide-on-med-and-down show-on-large">
                                 <iframe width="50%" height="400px"
-                                    src="https://www.youtube.com/embed/sZ5Xg4HpoBk?si=NPtV5Crw5QGNBnbN" frameborder="0"
+                                    src="https://www.youtube.com/embed/sZ5Xg4HpoBk?si=NPtV5Crw5QGNBnbN"
                                     allow="accelerometer; autoplay; encrypted-media;
                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -385,7 +354,7 @@
                             <div class="center-align show-on-medium-and-down
                                 hide-on-large-only">
                                 <iframe width="100%" height="300px"
-                                    src="https://www.youtube.com/embed/sZ5Xg4HpoBk?si=NPtV5Crw5QGNBnbN" frameborder="0"
+                                    src="https://www.youtube.com/embed/sZ5Xg4HpoBk?si=NPtV5Crw5QGNBnbN"
                                     allow="accelerometer; autoplay; encrypted-media;
                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -452,7 +421,7 @@
                         <div id="video3" class="cols12">
                             <div class="center-align hide-on-med-and-down show-on-large">
                                 <iframe width="50%" height="400px"
-                                    src="https://www.youtube.com/embed/9EM7jj3_7vE?si=Vv-NoYrmEULSCBvR" frameborder="0"
+                                    src="https://www.youtube.com/embed/9EM7jj3_7vE?si=Vv-NoYrmEULSCBvR"
                                     allow="accelerometer; autoplay; encrypted-media;
                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -460,7 +429,7 @@
                             <div class="center-align show-on-medium-and-down
                                 hide-on-large-only">
                                 <iframe width="100%" height="300px"
-                                    src="https://www.youtube.com/embed/9EM7jj3_7vE?si=Vv-NoYrmEULSCBvR" frameborder="0"
+                                    src="https://www.youtube.com/embed/9EM7jj3_7vE?si=Vv-NoYrmEULSCBvR"
                                     allow="accelerometer; autoplay; encrypted-media;
                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -618,7 +587,7 @@
                                                 <li class="indented">Golden opportunity to learn</li>
                                                 <li class="indented">Conference acceptance rate > journal acceptance
                                                 </li>
-                                                <li class="indented">Heart Arrhythmia Project <- 10th grade</li>
+                                                <li class="indented">Heart Arrhythmia Project &lt;- 10th grade</li>
                                             </ul>
                                         </li>
                                         <li class="indented">Camps
@@ -651,7 +620,7 @@
                         <div id="video5" class="cols12">
                             <div class="center-align hide-on-med-and-down show-on-large">
                                 <iframe width="50%" height="400px"
-                                    src="https://www.youtube.com/embed/NkdZu5En-nY?si=_pObwPHqHNBvXjpi" frameborder="0"
+                                    src="https://www.youtube.com/embed/NkdZu5En-nY?si=_pObwPHqHNBvXjpi"
                                     allow="accelerometer; autoplay; encrypted-media;
                                         gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -659,7 +628,7 @@
                             <div class="center-align show-on-medium-and-down
                                     hide-on-large-only">
                                 <iframe width="100%" height="300px"
-                                    src="https://www.youtube.com/embed/NkdZu5En-nY?si=_pObwPHqHNBvXjpi" frameborder="0"
+                                    src="https://www.youtube.com/embed/NkdZu5En-nY?si=_pObwPHqHNBvXjpi"
                                     allow="accelerometer; autoplay; encrypted-media;
                                         gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -756,7 +725,7 @@
                         <div id="video6" class="cols12">
                             <div class="center-align hide-on-med-and-down show-on-large">
                                 <iframe width="50%" height="400px"
-                                    src="https://www.youtube.com/embed/lQXIowh0_bk?si=2v-Zy1FPmtJOIeHD" frameborder="0"
+                                    src="https://www.youtube.com/embed/lQXIowh0_bk?si=2v-Zy1FPmtJOIeHD"
                                     allow="accelerometer; autoplay; encrypted-media;
                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -764,7 +733,7 @@
                             <div class="center-align show-on-medium-and-down
                                 hide-on-large-only">
                                 <iframe width="100%" height="300px"
-                                    src="https://www.youtube.com/embed/lQXIowh0_bk?si=2v-Zy1FPmtJOIeHD" frameborder="0"
+                                    src="https://www.youtube.com/embed/lQXIowh0_bk?si=2v-Zy1FPmtJOIeHD"
                                     allow="accelerometer; autoplay; encrypted-media;
                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -815,19 +784,4 @@
         </div>
 
     </main>
-
-    <div id="footer-placeholder">
-    </div>
-
-    <script>
-        $(function () {
-            $("#footer-placeholder").load("footer.html");
-        });
-    </script>
-
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/init.js"></script>
-</body>
-
-</html>
+</LegacyLayout>

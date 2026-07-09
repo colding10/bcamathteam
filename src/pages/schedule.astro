@@ -1,0 +1,28 @@
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+---
+
+<LegacyLayout title="Schedule" styles={["/css/schedule.css"]}>
+<main>
+            <div class="container">
+                <h3><i class="material-icons" style="font-size: 1.2em;">schedule</i>
+                    Math Team Calendar</h3>
+                <p>This calendar will contain all upcoming math team meetings,
+                    as well as any important events. For any questions regarding
+                    the calendar, please contact <a
+                        href="mailto:arrshi22@bergen.org">arrshi22@bergen.org</a>.
+                </p>
+                <div class="container">
+                    <div class="google-calendar">
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?src=arrshi22%40bergen.org&ctz=America%2FNew_York"
+                            style="border: 0" width="800" height="600"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </main>
+</LegacyLayout>

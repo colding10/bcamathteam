@@ -1,0 +1,19 @@
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+---
+
+<LegacyLayout title="Blog" styles={["/css/archive.css","/css/blog.css"]} scripts={["https://polyfill.io/v3/polyfill.min.js?features=es6","/js/blog.js"]}>
+<main>
+        <div class="container">
+            <h3><i class="material-icons" style="font-size: 1.2em;">insert_comment</i> Blog</h3>
+            <div class="container">
+                <div class="row" id="blog_posts">
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+</LegacyLayout>

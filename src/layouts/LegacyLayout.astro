@@ -1,0 +1,65 @@
+---
+import LegacyFooter from "../components/LegacyFooter.astro";
+import LegacyHeader from "../components/LegacyHeader.astro";
+
+interface Props {
+  title: string;
+  styles?: string[];
+  scripts?: string[];
+  firebase?: boolean;
+}
+
+const { title, styles = [], scripts = [], firebase = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=UA-88938949-2"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-88938949-2");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | BCA Math Team</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    {styles.map((href) => <link href={href} type="text/css" rel="stylesheet" media="screen,projection" />)}
+  </head>
+  <body>
+    <LegacyHeader />
+    <slot />
+    <LegacyFooter />
+
+    {firebase && <script is:inline src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>}
+    {firebase && <script is:inline src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>}
+    {firebase && <script is:inline src="https://www.gstatic.com/firebasejs/7.0.0/firebase-storage.js"></script>}
+    {firebase && <script is:inline src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>}
+    {firebase && (
+      <script is:inline>
+        var firebaseConfig = {
+          apiKey: "AIzaSyBH_Id1x-z7z4YD1GJi4jv16qMiHRMWZAw",
+          authDomain: "bca-math-team.firebaseapp.com",
+          databaseURL: "https://bca-math-team.firebaseio.com",
+          projectId: "bca-math-team",
+          storageBucket: "bca-math-team.appspot.com",
+          messagingSenderId: "814077710413",
+          appId: "1:814077710413:web:8ab93e1779063770634c04",
+          measurementId: "G-BE9QNCVW6Q",
+        };
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    )}
+    <script is:inline src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script is:inline src="/js/init.js"></script>
+    {scripts.map((src) => <script is:inline src={src}></script>)}
+  </body>
+</html>

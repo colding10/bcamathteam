@@ -1,38 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88938949-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+---
 
-            gtag("config", "UA-88938949-2");
-        </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>About | BCA Math Team</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-        <!-- CSS  -->
-        <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-        <link href="/css/about.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    </head>
-
-    <body>
-        <div id="header-placeholder"></div>
-
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-            $(function () {
-                $("#header-placeholder").load("header.html");
-            });
-        </script>
-        <main>
+<LegacyLayout title="About" styles={["/css/about.css"]}>
+<main>
             <!-- FIND GOOD PICTURES!!!! -->
             <!-- <div class="parallax-container">
             <div class="parallax">
@@ -81,7 +52,7 @@
                                 <table>
                                     <tbody>
                                         <tr>
-                                            <td class>
+                                            <td>
                                                 <b>Michael Middlezong</b>
                                                 <br />
                                                 <a href="mailto:micmid26@bergen.org">micmid26@bergen.org</a>
@@ -102,7 +73,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class>
+                                            <td>
                                                 <b>Arnav Adepu</b>
                                                 <br />
                                                 <a href="mailto:arnade26@bergen.org">arnade26@bergen.org</a>
@@ -119,7 +90,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class>
+                                            <td>
                                                 <b>Gabriele Herr</b>
                                                 <br />
                                                 <a href="mailto:gabher26@bergen.org">gabher26@bergen.org</a>
@@ -140,7 +111,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class>
+                                            <td>
                                                 <b>Alexander Choi</b>
                                                 <br />
                                                 <a href="mailto:alecho26@bergen.org">alecho26@bergen.org</a>
@@ -155,7 +126,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class>
+                                            <td>
                                                 <b>Mythreya Dharani</b>
                                                 <br />
                                                 <a href="mailto:mytdha26@bergen.org">mytdha26@bergen.org</a>
@@ -273,18 +244,4 @@
             <br />
             <br />
         </main>
-
-        <div id="footer-placeholder"></div>
-
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-            $(function () {
-                $("#footer-placeholder").load("footer.html");
-            });
-        </script>
-        <!--  Scripts-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="/js/init.js"></script>
-    </body>
-</html>
+</LegacyLayout>
