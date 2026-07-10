@@ -1,16 +1,26 @@
 name: CI
 
 on:
+  workflow_dispatch:
   pull_request:
+    branches:
+      - master
   push:
     branches:
       - master
-      - main
       - astro-refactor
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Check out repository
