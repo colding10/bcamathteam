@@ -7,7 +7,7 @@ Recommended Cloudflare Pages setup:
 1. In Cloudflare Pages, create a project from the forked GitHub repository.
 2. Use `npm run build` as the build command.
 3. Use `dist` as the output directory.
-4. Use Node.js 22.
+4. Use Node.js 22. The repo includes `.nvmrc` and `package.json` engine metadata for this.
 5. Keep the production branch pointed at a safe branch until the preview looks right.
 
 Do not change DNS first. Cloudflare Pages will provide a preview URL for each branch or pull request. Verify the preview URL before assigning `bcamathteam.org`.
