@@ -1,43 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+---
 
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-88938949-2"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-88938949-2');
-    </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Archive | BCA Math Team</title>
-        <link rel="shortcut icon" type="image/x-icon"
-            href="/images/favicon.ico">
-        <!-- CSS  -->
-        <link rel="stylesheet" type="text/css" href="/css/fonts.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet">
-        <link href="/css/materialize.css" type="text/css" rel="stylesheet"
-            media="screen,projection" />
-        <link href="/css/archive.css" type="text/css" rel="stylesheet"
-            media="screen,projection" />
-    </head>
-
-    <body>
-        <div id="header-placeholder">
-        </div>
-
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-    $(function(){
-      $("#header-placeholder").load("header.html");
-    });
-    </script>
-        <main>
+<LegacyLayout title="Archive" styles={["/css/archive.css"]}>
+<main>
             <!-- FIND GOOD PICTURES!!! -->
             <div class="parallax-container">
                 <div class="parallax"><img
@@ -51,7 +17,7 @@
 
                 <div class="section">
                     <h3>
-                        2025-26 (current season)
+                        2025-26
                     </h3>
                     <iframe
                                 src="https://drive.google.com/embeddedfolderview?id=1AzUckiOOoys5-WYspIdHJVEoDg8_ZaWU#list"
@@ -144,8 +110,6 @@
                 <br>
                 <br>
                 <br>
-
-                <div class="section">
 
                 <div class="section">
                     <h3>
@@ -241,10 +205,10 @@
                     competition for elementary and middle schoolers
                     in 4th to 8th grade. To view our past written problems
                     and
-                    solutions, please visit the <a
+                    solutions, please visit the{" "}<a
                         class="handout-link"
                         href="https://holbrook.bergen.org/archive">Archive</a>
-                    page of the <a
+                    {" "}page of the{" "}<a
                         href="https://holbrook.bergen.org/"
                         class="handout-link">JHMMC website</a>.
                 </div>
@@ -254,21 +218,4 @@
             <br>
             <br>
         </main>
-
-        <div id="footer-placeholder">
-        </div>
-
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-$(function(){
-  $("#footer-placeholder").load("footer.html");
-});
-</script>
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="/js/init.js"></script>
-        <!-- <script type="text/javascript" src="/js/pagination.js"></script> -->
-        <!-- <script src="/js/archive.js"></script> -->
-    </body>
-
-</html>
+</LegacyLayout>

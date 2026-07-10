@@ -1,43 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+---
 
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-88938949-2"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-88938949-2');
-    </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Resources | BCA Math Team</title>
-        <link rel="shortcut icon" type="image/x-icon"
-            href="/images/favicon.ico">
-        <!-- CSS  -->
-        <link rel="stylesheet" type="text/css" href="/css/fonts.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet">
-        <link href="/css/materialize.css" type="text/css" rel="stylesheet"
-            media="screen,projection" />
-        <link href="/css/info.css" type="text/css" rel="stylesheet"
-            media="screen,projection" />
-    </head>
-
-    <body>
-        <div id="header-placeholder">
-        </div>
-
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-    $(function(){
-      $("#header-placeholder").load("header.html");
-    });
-    </script>
-        <main>
+<LegacyLayout title="Resources" styles={["/css/info.css"]}>
+<main>
             <!-- FIND GOOD PICTURES!!! -->
             <div style="width: 90%; margin: 0 auto;">
                 <div class="row">
@@ -286,7 +252,7 @@
                                 your
                                 chance
                                 of qualifying for the AIME, the next round of
-                                math contests.
+                                math contests.</p>
                                 <p>To
                                     qualify
                                     for
@@ -444,45 +410,4 @@
                 <br>
                 <br>
             </main>
-
-            <div id="footer-placeholder">
-            </div>
-
-            <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-            <script>
-$(function(){
-  $("#footer-placeholder").load("footer.html");
-});
-</script>
-            <!--  Scripts-->
-            <!-- The core Firebase JS SDK is always required and must be listed first -->
-            <script
-                src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
-            <script
-                src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
-            <script
-                src="https://www.gstatic.com/firebasejs/7.0.0/firebase-storage.js"></script>
-            <script
-                src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
-            <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBH_Id1x-z7z4YD1GJi4jv16qMiHRMWZAw",
-            authDomain: "bca-math-team.firebaseapp.com",
-            databaseURL: "https://bca-math-team.firebaseio.com",
-            projectId: "bca-math-team",
-            storageBucket: "bca-math-team.appspot.com",
-            messagingSenderId: "814077710413",
-            appId: "1:814077710413:web:8ab93e1779063770634c04",
-            measurementId: "G-BE9QNCVW6Q"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            <script src="/js/init.js"></script>
-            <script src="/js/info.js"></script>
-        </body>
-
-    </html>
+</LegacyLayout>

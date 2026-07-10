@@ -1,3 +1,21 @@
 # BCA Math Team Website
 
-This is the repository for the official BCA Math Team website. It will provide information about the program itself, news pertaining to competitions, the schedule for math team meetings, and an archive of all past handouts and other material. This will facilitate communication to math team members (rather than mass email).
+Official website for the Bergen County Academies Math Team.
+
+The site is being refactored from legacy static HTML into Astro while keeping the old public URLs stable.
+
+Local development:
+
+```sh
+npm install
+npm run dev
+```
+
+Verification:
+
+```sh
+npm run check
+npm run build
+```
+
+Cloudflare Pages should use `npm run build` as the build command and `dist` as the output directory. See `docs/deployment.md` before changing DNS.

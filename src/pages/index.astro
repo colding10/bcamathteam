@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88938949-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+---
+import LegacyLayout from "../layouts/LegacyLayout.astro";
+---
 
-            gtag("config", "UA-88938949-2");
-        </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Home | BCA Math Team</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-        <link href="/css/index.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    </head>
-
-    <body>
-        <div id="header-placeholder"></div>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-            $(function () {
-                $("#header-placeholder").load("header.html");
-            });
-        </script>
-        <main>
+<LegacyLayout title="Home" styles={["/css/index.css"]}>
+<main>
             <div class="slider">
                 <ul class="slides">
                     <li>
@@ -65,10 +38,6 @@
             <br />
 
             <div class="container">
-                <blockquote>
-                    On November 15, due to the fall play, the morning program will run from 9:30am to 11:30am, and the afternoon program will run from 1:30pm to 4:00pm.
-                </blockquote>
-
                 <h4>Welcome to the BCA Math Team, one of the oldest and largest groups at the Academies.</h4>
                 <p>
                     We participate in a variety of national math competitions over the course of the year. Many of them
@@ -77,20 +46,20 @@
                     even Beijing and Seoul!
                 </p>
                 <p>
-                    <b>For students:</b> past resources (lecture notes, problem sets, and contests) can be found on our
+                    <b>For students:</b> past resources (lecture notes, problem sets, and contests) can be found on our{" "}
                     <a href="/archive.html">archive</a> page.
                 </p>
                 <div class="blue lighten-5" style="padding: 5px 20px">
                     <h5>Problem set submission</h5>
                     <p>
-                        For students who have attended intermediate room lectures, please submit your work here:
+                        For students who have attended intermediate room lectures, please submit your work here:{" "}
                         <a href="https://forms.gle/oXeJHpMQBCCW1ZiH9">https://forms.gle/oXeJHpMQBCCW1ZiH9</a>. The
                         problem set is typically due right before the following Math Team meeting. Please note that
                         problem set submissions may be considered when determining future eligibility for intermediate
                         room participation.
                     </p>
                     <p>
-                        If you missed a lecture, we suggest still reviewing the
+                        If you missed a lecture, we suggest still reviewing the{" "}
                         <a href="/archive.html">lecture notes</a> and attempting the problem set. Future lectures may
                         build on the material covered earlier, so it's important to stay caught up!
                     </p>
@@ -103,7 +72,7 @@
                 </p>
                 <h6>
                     <b
-                        >Please review
+                        >Please review{" "}
                         <a href="files25-26/Math Team Policies 2025-26.pdf">our Math Team policies</a> before
                         registering.</b
                     >
@@ -131,18 +100,4 @@
                 <br />
             </div>
         </main>
-
-        <div id="footer-placeholder"></div>
-
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-            $(function () {
-                $("#footer-placeholder").load("footer.html");
-            });
-        </script>
-        <!--  Scripts-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="/js/init.js"></script>
-    </body>
-</html>
+</LegacyLayout>

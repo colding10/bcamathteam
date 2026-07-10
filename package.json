@@ -1,0 +1,38 @@
+{
+  "name": "bcamathteam",
+  "version": "1.0.0",
+  "description": "Official website for the Bergen County Academies Math Team.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colding10/bcamathteam.git"
+  },
+  "keywords": [
+    "astro",
+    "static-site",
+    "math-team"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colding10/bcamathteam/issues"
+  },
+  "homepage": "https://github.com/colding10/bcamathteam#readme",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.0.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^6.0.3"
+  }
+}
