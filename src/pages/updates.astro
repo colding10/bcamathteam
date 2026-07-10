@@ -1,9 +1,9 @@
 ---
-import LegacyLayout from "../layouts/LegacyLayout.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<LegacyLayout title="Updates" styles={["/css/updates.css"]} scripts={["/js/updates.js"]} firebase>
-<main>
+<SiteLayout title="Updates" styles={["/css/updates.css"]} scripts={["/js/updates.js"]} firebase>
+<main id="main-content">
             <div class="container">
                 <h3><i class="material-icons" style="font-size: 1.2em;">update</i>
                     Updates</h3>
@@ -138,4 +138,4 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
             <br>
             <br>
         </main>
-</LegacyLayout>
+</SiteLayout>

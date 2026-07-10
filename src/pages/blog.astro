@@ -1,9 +1,9 @@
 ---
-import LegacyLayout from "../layouts/LegacyLayout.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<LegacyLayout title="Blog" styles={["/css/archive.css","/css/blog.css"]} scripts={["https://polyfill.io/v3/polyfill.min.js?features=es6","/js/blog.js"]}>
-<main>
+<SiteLayout title="Blog" styles={["/css/archive.css","/css/blog.css"]} scripts={["https://polyfill.io/v3/polyfill.min.js?features=es6","/js/blog.js"]}>
+<main id="main-content">
         <div class="container">
             <h3><i class="material-icons" style="font-size: 1.2em;">insert_comment</i> Blog</h3>
             <div class="container">
@@ -16,4 +16,4 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
         <br>
         <br>
     </main>
-</LegacyLayout>
+</SiteLayout>

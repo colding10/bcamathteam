@@ -1,42 +1,45 @@
 ---
-import LegacyFooter from "../components/LegacyFooter.astro";
-import LegacyHeader from "../components/LegacyHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import "../styles/global.css";
 
 interface Props {
   title: string;
+  description?: string;
   styles?: string[];
   scripts?: string[];
   firebase?: boolean;
 }
 
-const { title, styles = [], scripts = [], firebase = false } = Astro.props;
+const {
+  title,
+  description = "The official website of the Bergen County Academies Math Team.",
+  styles = [],
+  scripts = [],
+  firebase = false,
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=UA-88938949-2"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-88938949-2");
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#971f31" />
     <title>{title} | BCA Math Team</title>
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     {styles.map((href) => <link href={href} type="text/css" rel="stylesheet" media="screen,projection" />)}
   </head>
   <body>
-    <LegacyHeader />
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <SiteHeader />
     <slot />
-    <LegacyFooter />
+    <SiteFooter />
 
     {firebase && <script is:inline src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>}
     {firebase && <script is:inline src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>}
@@ -57,7 +60,7 @@ const { title, styles = [], scripts = [], firebase = false } = Astro.props;
         firebase.initializeApp(firebaseConfig);
       </script>
     )}
-    <script is:inline src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script is:inline src="/js/init.js"></script>
     {scripts.map((src) => <script is:inline src={src}></script>)}

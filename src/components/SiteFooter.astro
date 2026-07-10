@@ -1,0 +1,43 @@
+---
+import { ArrowUpRight, Camera, Mail, MapPin } from "@lucide/astro";
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__identity">
+      <a class="site-brand site-brand--footer" href="/">
+        <span class="site-brand__mark"><img src="/images/bca_logo.png" alt="BCA logo" /></span>
+        <span class="site-brand__text"><strong>BCA Math Team</strong><small>Curiosity, rigor, community.</small></span>
+      </a>
+      <p><MapPin size={17} /> 200 Hackensack Avenue, Hackensack, NJ</p>
+    </div>
+
+    <div class="site-footer__links">
+      <div>
+        <h2>Explore</h2>
+        <a href="/archive.html">Lecture archive</a>
+        <a href="/research.html">Research</a>
+        <a href="/news.html">Awards</a>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <a href="https://holbrook.bcamathteam.org/">JHMMC <ArrowUpRight size={14} /></a>
+        <a href="https://www.bergen.org/bergencountyacademies">Bergen County Academies <ArrowUpRight size={14} /></a>
+        <a href="https://www.instagram.com/bca_mt/" target="_blank" rel="noreferrer">
+          <Camera size={15} /> Instagram
+        </a>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <a href="mailto:micabra@bergen.org"><Mail size={15} /> Dr. Michael Abramson</a>
+        <a href="mailto:jonpin@bergen.org"><Mail size={15} /> Mr. Jon Pinyan</a>
+        <span class="site-footer__label">Webmaster</span>
+        <a href="mailto:coldin28@bergen.org"><Mail size={15} /> Colin Ding</a>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>&copy; 2026 Bergen County Academies</span>
+    <span>Built by the BCA Math Team</span>
+  </div>
+</footer>

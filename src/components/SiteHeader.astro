@@ -1,0 +1,49 @@
+---
+import { Menu } from "@lucide/astro";
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/about.html", label: "About" },
+  { href: "/summer.html", label: "Summer" },
+  { href: "/research.html", label: "Research" },
+  { href: "/archive.html", label: "Archive" },
+  { href: "/info.html", label: "Resources" },
+  { href: "/news.html", label: "Awards" },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isCurrent = (href: string) => {
+  const normalizedHref = href.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+  const normalizedPath = currentPath.replace(/\.html$/, "") || "/";
+  return normalizedHref === normalizedPath;
+};
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="/" aria-label="BCA Math Team home">
+      <span class="site-brand__mark" aria-hidden="true">
+        <img src="/images/bca_logo.png" alt="" />
+      </span>
+      <span class="site-brand__text">
+        <strong>BCA Math Team</strong>
+        <small>Bergen County Academies</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {navItems.map((item) => (
+        <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>{item.label}</a>
+      ))}
+    </nav>
+
+    <details class="mobile-nav">
+      <summary aria-label="Open navigation"><Menu size={22} stroke-width={1.8} /></summary>
+      <nav aria-label="Mobile navigation">
+        {navItems.map((item) => (
+          <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>{item.label}</a>
+        ))}
+      </nav>
+    </details>
+  </div>
+</header>
