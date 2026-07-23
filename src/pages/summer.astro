@@ -18,7 +18,7 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                 </p>
                 <p>
                     <a
-                        class="waves-effect waves-light btn"
+                        class="summer-interest-form"
                         href="https://forms.gle/mpjr3zGfEDffPLYRA"
                         target="_blank"
                         rel="noreferrer">Summer Lectures Interest Form</a
@@ -29,6 +29,13 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                     <a href="mailto:lamto28@bergen.org">lamto28@bergen.org</a>.
                 </p>
                 <h4>Algebra</h4>
+                <p class="summer-course-meta">
+                    <strong>Teacher:</strong> Skanda Ramanathan<br />
+                    <strong>Google Classroom:</strong>{" "}
+                    <a href="https://classroom.google.com/c/ODcwNzIyNzM1NDAw?cjc=smavdwea" target="_blank" rel="noreferrer"
+                        >Join classroom</a
+                    > <span aria-hidden="true">&middot;</span> Code: <code>smavdwea</code>
+                </p>
                 <p>
                     Students will explore a collection of powerful algebraic techniques frequently used in mathematics
                     competitions. Topics include Vieta's Formulas, methods for finding polynomial roots, arithmetic and
@@ -39,14 +46,28 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                 <p><b>Dates:</b> Sundays at 3:00 PM Eastern Time (8/9, 8/16, 8/23, 8/30)</p>
 
                 <h4>Number Theory</h4>
+                <p class="summer-course-meta">
+                    <strong>Teacher:</strong> Bozhan Shang<br />
+                    <strong>Google Classroom:</strong>{" "}
+                    <a href="https://classroom.google.com/c/ODcwODk3NTAyMzc3?cjc=5zcqza6r" target="_blank" rel="noreferrer"
+                        >Join classroom</a
+                    > <span aria-hidden="true">&middot;</span> Code: <code>5zcqza6r</code>
+                </p>
                 <p>
                     Students will explore the fundamentals of the integers. Key topics include modular arithmetic,
                     divisibility, and number bases. We will learn to apply results such as Fermat's Little Theorem,
                     Euler's Theorem, and the Chinese Remainder Theorem in competition math.
                 </p>
-                <p><b>Dates:</b> Fridays, time TBD (8/7, 8/14, 8/21, 8/28)</p>
+                <p><b>Dates:</b> Fridays at 6:30 PM Eastern Time (8/7, 8/14, 8/21, 8/28)</p>
 
                 <h4>Combinatorics</h4>
+                <p class="summer-course-meta">
+                    <strong>Teacher:</strong> Lam To<br />
+                    <strong>Google Classroom:</strong>{" "}
+                    <a href="https://classroom.google.com/c/ODcwODkxMjkxNTE4?cjc=5ertxiry" target="_blank" rel="noreferrer"
+                        >Join classroom</a
+                    > <span aria-hidden="true">&middot;</span> Code: <code>5ertxiry</code>
+                </p>
                 <p>
                     Students will strengthen their skills in constructive counting, casework, and expected value through
                     guided problems using higher-level techniques such as bijections and generating functions. Problems
@@ -56,6 +77,13 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                 <p><b>Dates:</b> Fridays, 4:00-5:30 PM Eastern Time (8/7, 8/14, 8/21, 8/28)</p>
 
                 <h4>Geometry</h4>
+                <p class="summer-course-meta">
+                    <strong>Teachers:</strong> Lam To and Aalok Pathak<br />
+                    <strong>Google Classroom:</strong>{" "}
+                    <a href="https://classroom.google.com/c/ODcwODkxMTYzMTQ3?cjc=cjcnnxdk" target="_blank" rel="noreferrer"
+                        >Join classroom</a
+                    > <span aria-hidden="true">&middot;</span> Code: <code>cjcnnxdk</code>
+                </p>
                 <p>
                     Students will review key results including Stewart's Theorem, Ptolemy's Theorem, Power of a Point,
                     the Laws of Sines and Cosines, similar-triangle ratios, and area formulas. More involved problems
@@ -67,3 +95,28 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
             </div>
         </main>
 </LegacyLayout>
+
+<style>
+    .summer-interest-form {
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+    }
+
+    .summer-course-meta {
+        margin-top: -0.5rem;
+        padding-left: 0.9rem;
+        border-left: 3px solid #e0e0e0;
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .summer-course-meta code {
+        padding: 0.08rem 0.3rem;
+        background: #f2f2f2;
+        border-radius: 2px;
+        color: #333;
+        font-family: monospace;
+    }
+</style>
