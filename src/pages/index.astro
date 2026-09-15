@@ -49,36 +49,26 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                     <b>For students:</b> past resources (lecture notes, problem sets, and contests) can be found on our{" "}
                     <a href="/archive.html">archive</a> page.
                 </p>
-                <div class="blue lighten-5" style="padding: 5px 20px">
-                    <h5>Problem set submission</h5>
-                    <p>
-                        For students who have attended intermediate room lectures, please submit your work here:{" "}
-                        <a href="https://forms.gle/oXeJHpMQBCCW1ZiH9">https://forms.gle/oXeJHpMQBCCW1ZiH9</a>. The
-                        problem set is typically due right before the following Math Team meeting. Please note that
-                        problem set submissions may be considered when determining future eligibility for intermediate
-                        room participation.
-                    </p>
-                    <p>
-                        If you missed a lecture, we suggest still reviewing the{" "}
-                        <a href="/archive.html">lecture notes</a> and attempting the problem set. Future lectures may
-                        build on the material covered earlier, so it's important to stay caught up!
-                    </p>
-                </div>
 
-                <h4>First meeting: September 19</h4>
-                <p>
-                    We will hold our first Math Team meeting of the 2026-27 school year on Saturday, September 19,
-                    from 1:00 to 4:00 PM.
-                </p>
-
-                <div class="blue lighten-5" style="padding: 5px 20px">
-                    <h5>Registration</h5>
+                <section class="blue lighten-5 homepage-updates" aria-labelledby="school-year-updates">
+                    <h5 id="school-year-updates">2026-27 Math Team Updates</h5>
                     <p>
-                        Join the 2026-27 mailing list:<br />
+                        <b>Registration:</b><br />
                         <a href="https://forms.gle/GURRT9a4jkwGmot19">Mailing list for grades 9-12</a><br />
                         <a href="https://forms.gle/m9yMA5VfT5x3tCiq5">Mailing list for grades 8 and below</a>
                     </p>
-                </div>
+                    <p>
+                        <b>High school program:</b> The first meeting is{" "}<span class="meeting-time">Saturday, September 19, from 1:00 to 4:00 PM</span>.
+                    </p>
+                    <p>
+                        <b>Morning program:</b> The schedule is still being planned, and meetings will begin in
+                        mid-to-late October.
+                    </p>
+                    <p>
+                        <b><a href="https://holbrook.bcamathteam.org/">JHMMC</a>:</b> The competition will be held
+                        November 14-15, 2026. Registration will be available shortly.
+                    </p>
+                </section>
 
                 <!-- <h4>This past meeting (9/14)...</h4>
                 <p>
@@ -95,3 +85,23 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
             </div>
         </main>
 </LegacyLayout>
+
+<style>
+    .homepage-updates {
+        margin: 1.75rem 0 2rem;
+        padding: 0.5rem 1.25rem 0.75rem;
+    }
+
+    .homepage-updates h5 {
+        margin-bottom: 1rem;
+    }
+
+    .homepage-updates p {
+        margin: 0.85rem 0;
+    }
+
+    .meeting-time {
+        text-decoration: underline;
+        text-underline-offset: 0.15em;
+    }
+</style>
