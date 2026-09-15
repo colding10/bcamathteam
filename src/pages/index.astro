@@ -49,6 +49,18 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                     <b>For students:</b> past resources (lecture notes, problem sets, and contests) can be found on our{" "}
                     <a href="/archive.html">archive</a> page.
                 </p>
+                <section class="meeting-announcement" aria-labelledby="first-meeting-title">
+                    <h4 id="first-meeting-title">First meeting: September 19</h4>
+                    <p>
+                        We will hold our first Math Team meeting of the 2026-27 school year on Saturday, September 19,
+                        from 1:00 to 4:00 PM.
+                    </p>
+                    <p>
+                        Join the new-year mailing list: <a href="https://forms.gle/GURRT9a4jkwGmot19">grades 9-12</a>
+                        <span aria-hidden="true">&middot;</span>
+                        <a href="https://forms.gle/m9yMA5VfT5x3tCiq5">grades 8 and below</a>.
+                    </p>
+                </section>
                 <div class="blue lighten-5" style="padding: 5px 20px">
                     <h5>Problem set submission</h5>
                     <p>
@@ -101,3 +113,25 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
             </div>
         </main>
 </LegacyLayout>
+
+<style>
+    .meeting-announcement {
+        margin: 2rem 0;
+        padding: 1.3rem 1.6rem;
+        border-left: 4px solid #ef8a8c;
+        background: #f8f8f8;
+    }
+
+    .meeting-announcement h4 {
+        margin: 0 0 0.55rem;
+    }
+
+    .meeting-announcement p {
+        margin: 0.55rem 0 0;
+    }
+
+    .meeting-announcement a {
+        text-decoration: underline;
+        text-underline-offset: 0.16em;
+    }
+</style>
