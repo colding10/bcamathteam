@@ -50,6 +50,11 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                     <a href="/archive.html">archive</a> page.
                 </p>
 
+                <section class="red lighten-5 meeting-cancellation" aria-labelledby="meeting-cancellation-title">
+                    <h5 id="meeting-cancellation-title">Meeting canceled: September 26</h5>
+                    <p>The Math Team meeting scheduled for Saturday, September 26 has been canceled due to weather.</p>
+                </section>
+
                 <section class="blue lighten-5 homepage-updates" aria-labelledby="school-year-updates">
                     <h5 id="school-year-updates">2026-27 Math Team Updates</h5>
                     <p>
@@ -87,6 +92,20 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
 </LegacyLayout>
 
 <style>
+    .meeting-cancellation {
+        margin: 1.75rem 0;
+        padding: 0.6rem 1.25rem 0.75rem;
+        border-left: 4px solid #e57373;
+    }
+
+    .meeting-cancellation h5 {
+        margin-bottom: 0.6rem;
+    }
+
+    .meeting-cancellation p {
+        margin: 0.6rem 0;
+    }
+
     .homepage-updates {
         margin: 1.75rem 0 2rem;
         padding: 0.5rem 1.25rem 0.75rem;
