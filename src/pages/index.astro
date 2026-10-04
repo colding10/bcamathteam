@@ -58,15 +58,17 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                         <a href="https://forms.gle/m9yMA5VfT5x3tCiq5">Mailing list for grades 8 and below</a>
                     </p>
                     <p>
-                        <b>High school program:</b> The first meeting is{" "}<span class="meeting-time">Saturday, September 19, from 1:00 to 4:00 PM</span>.
-                    </p>
-                    <p>
                         <b>Morning program:</b> The schedule is still being planned, and meetings will begin in
                         mid-to-late October.
                     </p>
+                </section>
+
+                <section class="lime lighten-5 jhmmc-update" aria-labelledby="jhmmc-update-title">
+                    <h5 id="jhmmc-update-title">JHMMC Registration</h5>
                     <p>
-                        <b><a href="https://holbrook.bcamathteam.org/">JHMMC</a>:</b> The competition will be held
-                        November 14-15, 2026. Registration will be available shortly.
+                        The Joe Holbrook Memorial Math Competition will be held November 14-15, 2026. Visit the{" "}
+                        <a href="https://holbrook.bcamathteam.org/">official JHMMC website</a>{" "}
+                        for registration and event details.
                     </p>
                 </section>
 
@@ -87,22 +89,8 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
 </LegacyLayout>
 
 <style>
-    .meeting-cancellation {
-        margin: 1.75rem 0;
-        padding: 0.6rem 1.25rem 0.75rem;
-        border-left: 4px solid #e57373;
-    }
-
-    .meeting-cancellation h5 {
-        margin-bottom: 0.6rem;
-    }
-
-    .meeting-cancellation p {
-        margin: 0.6rem 0;
-    }
-
     .homepage-updates {
-        margin: 1.75rem 0 2rem;
+        margin: 1.75rem 0 1rem;
         padding: 0.5rem 1.25rem 0.75rem;
     }
 
@@ -114,8 +102,18 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
         margin: 0.85rem 0;
     }
 
-    .meeting-time {
-        text-decoration: underline;
-        text-underline-offset: 0.15em;
+    .jhmmc-update {
+        margin: 0 0 2rem;
+        padding: 0.5rem 1.25rem 0.75rem;
+        border-left: 4px solid #9e9d24;
     }
+
+    .jhmmc-update h5 {
+        margin-bottom: 0.75rem;
+    }
+
+    .jhmmc-update p {
+        margin: 0.75rem 0;
+    }
+
 </style>
