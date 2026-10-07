@@ -1,0 +1,88 @@
+---
+import type { PracticeContest } from "../data/practiceContests";
+import { formatMeetingDate } from "../data/practiceContests";
+
+interface Props {
+    contests: PracticeContest[];
+    showDate?: boolean;
+}
+
+const { contests, showDate = true } = Astro.props;
+---
+
+<ul class="contest-list">
+    {contests.map((contest) => (
+        <li>
+            <span class="contest-name">
+                {contest.title}
+                {showDate && <time class="contest-date" datetime={contest.meetingDate}>{formatMeetingDate(contest.meetingDate)}</time>}
+            </span>
+            <span class="contest-links">
+                <a href={contest.problemsHref} target="_blank" rel="noreferrer"
+                    aria-label={`${contest.title}: problems (PDF)`}>Problems</a>
+                {contest.solutionsHref && (
+                    <a href={contest.solutionsHref} target="_blank" rel="noreferrer"
+                        aria-label={`${contest.title}: solutions (PDF)`}>Solutions</a>
+                )}
+            </span>
+        </li>
+    ))}
+</ul>
+
+<style>
+    .contest-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .contest-list li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.15rem 1.5rem;
+        padding: 0.45rem 0;
+    }
+
+    .contest-list li + li {
+        border-top: 1px solid #ddd;
+    }
+
+    .contest-date {
+        display: inline-block;
+        margin-left: 0.65rem;
+        color: #616161;
+        font-size: 0.9rem;
+    }
+
+    .contest-links {
+        display: flex;
+        gap: 1.25rem;
+    }
+
+    .contest-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.5rem;
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+    }
+
+    .contest-links a:hover {
+        color: #0277bd;
+    }
+
+    .contest-links a:focus-visible {
+        outline: 2px solid #0277bd;
+        outline-offset: 3px;
+    }
+
+    @media (max-width: 600px) {
+        .contest-date {
+            display: block;
+            margin-left: 0;
+        }
+    }
+</style>

@@ -1,5 +1,7 @@
 ---
 import LegacyLayout from "../layouts/LegacyLayout.astro";
+import { practiceContests } from "../data/practiceContests";
+import PracticeContestList from "../components/PracticeContestList.astro";
 ---
 
 <LegacyLayout title="Archive" styles={["/css/archive.css"]}>
@@ -13,7 +15,14 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
             <div class="container">
                 <h3><i class="material-icons" style="font-size: 1.2em;">archive</i>
                     Archive</h3>
-                This archive contains materials from past Math Team meetings.
+                <p>
+                    Materials from past Math Team meetings.
+                </p>
+
+                <section id="practice-contests" class="practice-contests" aria-labelledby="practice-contests-title">
+                    <h5 id="practice-contests-title">Practice Contests</h5>
+                    <PracticeContestList contests={practiceContests} />
+                </section>
 
                 <div class="section">
                     <h3>
@@ -229,3 +238,14 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
             <br>
         </main>
 </LegacyLayout>
+
+<style>
+    .practice-contests {
+        margin-top: 1.5rem;
+        scroll-margin-top: 1rem;
+    }
+
+    .practice-contests h5 {
+        margin: 0 0 0.25rem;
+    }
+</style>
