@@ -4,6 +4,20 @@ import { practiceContests, formatMeetingDate } from "../data/practiceContests";
 import PracticeContestList from "../components/PracticeContestList.astro";
 
 const latestContest = practiceContests[0];
+const amcRegistration = [
+    {
+        round: "A",
+        date: "November 5",
+        studentsHref: "https://bit.ly/BCA-AMC26A-home",
+        guestsHref: "https://bit.ly/BCA-AMC26A-guest",
+    },
+    {
+        round: "B",
+        date: "November 13",
+        studentsHref: "https://bit.ly/BCA-AMC26B-home",
+        guestsHref: "https://bit.ly/BCA-AMC26B-guest",
+    },
+];
 ---
 
 <LegacyLayout title="Home" styles={["/css/index.css"]}>
@@ -54,6 +68,20 @@ const latestContest = practiceContests[0];
                     <a href="/archive.html">archive</a> page.
                 </p>
 
+                <section class="amc-registration" aria-labelledby="amc-registration-title">
+                    <h5 id="amc-registration-title">AMC 10/12 Registration</h5>
+                    {amcRegistration.map((registration) => (
+                        <p>
+                            <b>{registration.round}</b> ({registration.date}):{" "}
+                            <a href={registration.studentsHref}
+                                aria-label={`AMC 10/12 ${registration.round}: BCA student registration`}>BCA students</a>
+                            {" / "}
+                            <a href={registration.guestsHref}
+                                aria-label={`AMC 10/12 ${registration.round}: guest registration`}>Guests</a>
+                        </p>
+                    ))}
+                </section>
+
                 {latestContest && (
                     <section class="latest-meeting" aria-labelledby="latest-meeting-title">
                         <h5 id="latest-meeting-title">From the {formatMeetingDate(latestContest.meetingDate, false)} meeting</h5>
@@ -100,6 +128,28 @@ const latestContest = practiceContests[0];
 </LegacyLayout>
 
 <style>
+    .amc-registration {
+        margin-top: 1.75rem;
+    }
+
+    .amc-registration h5 {
+        margin: 0 0 0.5rem;
+    }
+
+    .amc-registration p {
+        margin: 0.35rem 0;
+    }
+
+    .amc-registration a {
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+    }
+
+    .amc-registration a:focus-visible {
+        outline: 2px solid #0277bd;
+        outline-offset: 3px;
+    }
+
     .latest-meeting {
         margin-top: 1.75rem;
     }
