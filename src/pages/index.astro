@@ -4,6 +4,7 @@ import { practiceContests, formatMeetingDate } from "../data/practiceContests";
 import PracticeContestList from "../components/PracticeContestList.astro";
 
 const latestContest = practiceContests[0];
+const latestMeetingContests = practiceContests.filter((contest) => contest.meetingDate === latestContest?.meetingDate);
 const amcRegistration = [
     {
         round: "A",
@@ -85,7 +86,7 @@ const amcRegistration = [
                 {latestContest && (
                     <section class="latest-meeting" aria-labelledby="latest-meeting-title">
                         <h5 id="latest-meeting-title">From the {formatMeetingDate(latestContest.meetingDate, false)} meeting</h5>
-                        <PracticeContestList contests={[latestContest]} showDate={false} />
+                        <PracticeContestList contests={latestMeetingContests} showDate={false} />
                     </section>
                 )}
 
