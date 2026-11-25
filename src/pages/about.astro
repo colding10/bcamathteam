@@ -1,5 +1,18 @@
 ---
 import LegacyLayout from "../layouts/LegacyLayout.astro";
+
+const captains = [
+    {
+        name: "Aalok Pathak",
+        photo: "/images/leadership_26-27/aalok-pathak.jpg",
+        bio: "Hi, I'm Aalok, a senior in the engineering academy at BCA! I've been a part of BCA Math Team since ninth grade. My favorite area of math is geometry, specifically projective geometry. Besides math, I love playing tennis, and I am a part of the Ball Crew every year at the US Open Tennis Championships!",
+    },
+    {
+        name: "Michael Pylypovych",
+        photo: "/images/leadership_26-27/michael-pylypovych.jpg",
+        bio: "Hi, I'm Michael, a senior in the science academy at BCA! I joined Math Team in ninth grade and have been coming ever since. I enjoy algebra and number theory. Besides math, I like playing chess and volleyball. I also love the outdoors!",
+    },
+];
 ---
 
 <LegacyLayout title="About" styles={["/css/about.css"]}>
@@ -49,7 +62,18 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
                         <div class="card grey lighten-4">
                             <div class="card-content black-text">
                                 <span class="card-title" id="captains">Captains</span>
-                                <p>TBD</p>
+                                <div class="captains" aria-labelledby="captains">
+                                    {captains.map((captain) => (
+                                        <article class="captain">
+                                            <div class="captain-profile">
+                                                <h5>{captain.name}</h5>
+                                                <img src={captain.photo} alt={captain.name}
+                                                    width="150" height="220" loading="lazy" />
+                                            </div>
+                                            <p>{captain.bio}</p>
+                                        </article>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -148,3 +172,37 @@ import LegacyLayout from "../layouts/LegacyLayout.astro";
             <br />
         </main>
 </LegacyLayout>
+
+<style>
+    .captain {
+        display: grid;
+        grid-template-columns: 180px minmax(0, 1fr);
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.25rem 0;
+    }
+
+    .captain + .captain {
+        border-top: 1px solid #ddd;
+    }
+
+    .captain-profile h5 {
+        margin: 0 0 0.65rem;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    .captain-profile img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+        .captain {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 1rem;
+        }
+    }
+</style>
